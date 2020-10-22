@@ -38,9 +38,10 @@ public class Demo {
     int[][] arr = new int[rows][cols];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        arr[i][j] = (round)(Math.random() * maxValue);
+        arr[i][j] = (int)(Math.random() * (maxValue+1));
       }
     }
+    return arr;
   }
 
   public static void main(String[] args) {
@@ -54,5 +55,8 @@ public class Demo {
     int[][] b = new int[3][4];
     //System.out.println(arrayDeepToString(b));
     System.out.println(arrayDeepToString(b).replace("}, ", "},\n"));
+
+    System.out.println(arrayDeepToString(create2DArray(5,4,4)));
+    System.out.println(arrayDeepToString(create2DArray(6,2,3)));
   }
 }
